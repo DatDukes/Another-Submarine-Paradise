@@ -26,7 +26,7 @@ public class PlayerController : Entity
 
     override public void Step()
     {
-
+        this.transform.position = new Vector3(nextPosition.x, this.transform.position.y, nextPosition.y);
     }
 
     public void Move()
