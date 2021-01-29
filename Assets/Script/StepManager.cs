@@ -24,5 +24,7 @@ public class StepManager : MonoBehaviour
         {
             i.Step();
         }
+
+        GameManager.Instance.resourcesManager.oxygen -= GameManager.Instance.gameSettings.stepOxygenConsumed;
     }
 }

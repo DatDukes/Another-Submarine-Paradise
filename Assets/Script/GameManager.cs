@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public GridManager gridManager;
     public StepManager stepManager;
     public EntityManager entityManager;
+    public RessourcesManager resourcesManager;
+
+    public GameSettings gameSettings;
 
     // Start is called before the first frame update
     void Awake()
