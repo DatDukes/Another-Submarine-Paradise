@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingEntity : Entity
+public class FollowingEntity : Entity
 {
-    public Vector2Int movePerStep;
+    public Entity player;
+    public int cellPerStep;
 
     public override void Init()
     {
@@ -16,7 +17,7 @@ public class MovingEntity : Entity
 
     public override void Step()
     {
-        position += movePerStep;
-        transform.position = new Vector3(position.x, 0,position.y);
+        position += Pathfinding.GetStepMovement(this, player.position, cellPerStep);
+        transform.position = new Vector3(position.x, 0, position.y);
     }
 }
