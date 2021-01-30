@@ -7,6 +7,8 @@ public class DrawingManager : MonoBehaviour
     public bool drawingOn = false;
     public bool lineCreated = false;
 
+    public bool erasingOn = false;
+
     public GameObject drawingParent;
     public GameObject linePrefab;
 
@@ -58,23 +60,57 @@ public class DrawingManager : MonoBehaviour
 
             if (Input.GetButtonUp("Fire1") && lineCreated )
             {
+                
+                MeshCollider meshCollider = currentLine.gameObject.GetComponent<MeshCollider>();
+
+                Mesh mesh = new Mesh();
+                currentLine.BakeMesh(mesh, true);
+                meshCollider.sharedMesh = mesh;
+
                 lineCreated = false;
                 lineCurrentPoint = 0;
             }
-
-           
-
             
+        }
+
+        if(erasingOn)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Input.GetButton("Fire1"))
+            {
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if(hit.collider.tag == "Line")
+                    {
+                        Destroy(hit.collider.gameObject);
+                    }
+                }
+
+            }
         }
     }
 
     public void DrawingButton()
     {
         drawingOn = !drawingOn;
+        ErasingOff();
     }
 
     public void DrawingOff()
     {
         drawingOn = false;
+    }
+
+    public void ErasingButton()
+    {
+        erasingOn = !erasingOn;
+        DrawingOff();
+    }
+
+    public void ErasingOff()
+    {
+        erasingOn = false;
     }
 }

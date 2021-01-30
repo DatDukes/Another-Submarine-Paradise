@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   startOxygen: 10
-  startMoveRange: 3
+  startMoveRange: 5
   stepOxygenConsumed: 1
