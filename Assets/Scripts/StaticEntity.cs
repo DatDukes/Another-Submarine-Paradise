@@ -2,6 +2,8 @@
 
 public class StaticEntity : Entity
 {
+    public int oxygenGain;
+
     private EntityManager manager;
 
     override public void Init()
@@ -15,5 +17,11 @@ public class StaticEntity : Entity
     override public void Step()
     {
         manager.AddPathNode(new EntityPathNode(this, position));
+    }
+
+    public override void Interact(Entity other)
+    {
+        GameManager.Instance.resourcesManager.oxygen += oxygenGain;
+        oxygenGain = 0;
     }
 }
