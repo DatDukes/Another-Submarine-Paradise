@@ -17,8 +17,15 @@ public class PlayerController : Entity
 
     override public void Step()
     {
-        position += Pathfinding.GetStepMovement(manager, this, nextPosition, cellPerStep);
-        transform.position = new Vector3(position.x, 0, position.y);
+        if (position != nextPosition)
+        {
+            position += Pathfinding.GetStepMovement(manager, this, nextPosition, cellPerStep);
+            transform.position = new Vector3(position.x, 0, position.y);
+        }
+        else 
+        {
+            manager.AddPathNode(new EntityPathNode(this, position));
+        }
     }
 
     public void Move()

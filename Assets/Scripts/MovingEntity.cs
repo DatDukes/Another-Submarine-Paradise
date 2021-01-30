@@ -6,8 +6,11 @@ public class MovingEntity : Entity
 {
     public Vector2Int movePerStep;
 
-    public override void Init()
+    private EntityManager manager;
+
+    override public void Init()
     {
+        manager = GameManager.Instance.entityManager;
         transform.position = new Vector3(Mathf.Round(transform.position.x), 0, Mathf.Round(transform.position.z));
 
         position.x = (int)(transform.position.x);
@@ -16,7 +19,7 @@ public class MovingEntity : Entity
 
     public override void Step()
     {
-        position += movePerStep;
+        position += Pathfinding.GetStepMovement(manager, this, position + movePerStep, 999);
         transform.position = new Vector3(position.x, 0,position.y);
     }
 }
