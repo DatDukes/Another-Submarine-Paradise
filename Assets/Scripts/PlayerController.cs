@@ -5,33 +5,30 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : Entity
 {
-    public Vector2Int nextPosition;
+    public int cellPerStep;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private Vector2Int nextPosition;
+    private EntityManager manager;
 
     override public void Init()
     {
-
+        manager = GameManager.Instance.entityManager;
     }
 
     override public void Step()
     {
-        this.transform.position = new Vector3(nextPosition.x, this.transform.position.y, nextPosition.y);
+        position += Pathfinding.GetStepMovement(manager, this, nextPosition, cellPerStep);
+        transform.position = new Vector3(position.x, 0, position.y);
     }
 
     public void Move()
     {
         StartCoroutine(MoveCouroutine());
+    }
+
+    public override void Interact(Entity other)
+    {
+        Debug.Log("Interact With " + other.type);
     }
 
     private IEnumerator MoveCouroutine()

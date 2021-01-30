@@ -5,25 +5,14 @@ using UnityEngine;
 public class StepManager : MonoBehaviour
 {
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GoToNextStep()
     {
         foreach(Entity i in GameManager.Instance.entityManager.entities)
         {
             i.Step();
         }
+
+        GameManager.Instance.entityManager.pathsNodes.Clear();
 
         GameManager.Instance.resourcesManager.oxygen -= GameManager.Instance.gameSettings.stepOxygenConsumed;
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pathfinding
 {
-    public static Vector2Int GetStepMovement(Entity entity, Vector2Int targetPos, int maxCell) 
+    public static Vector2Int GetStepMovement(EntityManager manager,  Entity entity, Vector2Int targetPos, int maxCell) 
     {
         Vector2Int move = new Vector2Int();
         Vector2Int dir = targetPos - entity.position;
@@ -28,6 +28,8 @@ public class Pathfinding
                 move.y += j;
                 dir.y -= j;
             }
+
+            manager.AddPathNode(new EntityPathNode(entity, entity.position + move));
         }
 
         return move;
