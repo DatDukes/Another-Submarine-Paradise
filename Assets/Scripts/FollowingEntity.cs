@@ -6,12 +6,15 @@ public class FollowingEntity : Entity
 {
     public Entity player;
     public int cellPerStep;
+    public int oxygenVoler;
+    public int osefTimerApresVol;
     public int maxFollowingDistance;
     public int detectionDistance;
 
     private EntityManager manager;
     private Vector2Int startPosition;
     private Vector2Int target;
+    private int osefTimer;
 
     public override void Init()
     {
@@ -30,7 +33,9 @@ public class FollowingEntity : Entity
         Vector2Int distPlayerEntity = player.position - position;
         Vector2Int distStartPlayer = player.position - startPosition;
 
-        bool followPlayer = distPlayerEntity.magnitude < detectionDistance && distStartPlayer.magnitude < maxFollowingDistance;
+        bool followPlayer = osefTimer <= 0 && distPlayerEntity.magnitude < detectionDistance && distStartPlayer.magnitude < maxFollowingDistance;
+
+        osefTimer = Mathf.Max(0, osefTimer - 1);
 
         if (followPlayer) 
         {
@@ -48,6 +53,15 @@ public class FollowingEntity : Entity
             {
                 manager.AddPathNode(new EntityPathNode(this, position));
             }
+        }
+    }
+
+    public override void Interact(Entity other)
+    {
+        if(osefTimer <= 0 && other.type == EntityType.player) 
+        {
+            GameManager.Instance.resourcesManager.oxygen -= oxygenVoler;
+            osefTimer = osefTimerApresVol;
         }
     }
 }

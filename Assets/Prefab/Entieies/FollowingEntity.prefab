@@ -47,8 +47,10 @@ MonoBehaviour:
   type: 0
   position: {x: -6, y: -5}
   player: {fileID: 0}
-  cellPerStep: 3
-  maxFollowingDistance: 10
+  cellPerStep: 2
+  oxygenVoler: 2
+  osefTimerApresVol: 8
+  maxFollowingDistance: 12
   detectionDistance: 5
 --- !u!1 &5939324783403698774
 GameObject:
