@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6db2977a2c6cc4fa32ef5c3da4156f, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  startOxygen: 10
+  startOxygen: 20
   startMoveRange: 3
   stepOxygenConsumed: 1
