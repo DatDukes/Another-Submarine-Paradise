@@ -14,6 +14,6 @@ public class StepManager : MonoBehaviour
 
         GameManager.Instance.entityManager.pathsNodes.Clear();
 
-        GameManager.Instance.resourcesManager.oxygen -= GameManager.Instance.gameSettings.stepOxygenConsumed;
+        GameManager.Instance.resourcesManager.LowerResource(RessourceType.Oxygen, GameManager.Instance.gameSettings.stepOxygenConsumed);
     }
 }
