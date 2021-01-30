@@ -48,7 +48,7 @@ MonoBehaviour:
   position: {x: -6, y: -5}
   player: {fileID: 0}
   cellPerStep: 2
-  oxygenVoler: 2
+  oxygenVoler: 5
   osefTimerApresVol: 8
   maxFollowingDistance: 12
   detectionDistance: 5

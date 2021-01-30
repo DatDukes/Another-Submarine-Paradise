@@ -64,4 +64,9 @@ public class FollowingEntity : Entity
             osefTimer = osefTimerApresVol;
         }
     }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, detectionDistance);
+    }
 }
