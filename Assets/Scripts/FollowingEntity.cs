@@ -62,6 +62,7 @@ public class FollowingEntity : Entity
         if(osefTimer <= 0 && other.type == EntityType.player) 
         {
             GameManager.Instance.resourcesManager.oxygen -= oxygenVoler;
+            GameManager.Instance.dialog.AddLog("An Pirate Stole " + oxygenVoler + " oxygen from you");
             osefTimer = osefTimerApresVol;
         }
     }

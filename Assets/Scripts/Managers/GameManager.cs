@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public EntityManager entityManager;
     public RessourcesManager resourcesManager;
     public DrawingManager drawingManager;
+    public DialogManager dialog;
 
     public GameSettings gameSettings;
 

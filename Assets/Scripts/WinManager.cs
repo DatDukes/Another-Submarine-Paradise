@@ -30,11 +30,11 @@ public class WinManager : MonoBehaviour
     {
         if(player.position == CurrentWinCondition.position) 
         {
-            Debug.Log("You Win");
+            GameManager.Instance.dialog.AddLog("You win");
         }
         else 
         {
-            Debug.Log("Missed");
+            GameManager.Instance.dialog.AddLog("Nothing found");
         }
     }
 }
