@@ -67,6 +67,6 @@ public class FollowingEntity : Entity
 
     public void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, detectionDistance);
+        Gizmos.DrawWireSphere(new Vector3(startPosition.x,0, startPosition.y), detectionDistance);
     }
 }
