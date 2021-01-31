@@ -12,7 +12,19 @@ public enum RessourceType
 public class RessourcesManager : MonoBehaviour
 {
     [HideInInspector]
-    public int oxygen;
+    public int oxygen 
+    {
+        get 
+        {
+            return _oxygen;
+        }
+        set 
+        {
+            if (value <= 0) GameManager.Instance.GameOver(false);
+            _oxygen = value;
+        }
+    }
+    private int _oxygen;
     [HideInInspector]
     public int torpedos;
 

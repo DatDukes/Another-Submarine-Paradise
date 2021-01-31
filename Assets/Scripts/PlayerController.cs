@@ -6,8 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : Entity
 {
-   
-
     public GameObject moveFeeback;
 
     [HideInInspector]
@@ -39,7 +37,7 @@ public class PlayerController : Entity
 
     public void Move()
     {
-        StartCoroutine(MoveCouroutine());
+        if(!GameManager.Instance.gameOver) StartCoroutine(MoveCouroutine());
     }
 
     public override void Interact(Entity other)

@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager Instance;
+
+    public bool gameOver;
+    public TextMeshProUGUI text;
 
     public GridManager gridManager;
     public StepManager stepManager;
@@ -20,17 +24,15 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        text.gameObject.SetActive(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void GameOver(bool win)
     {
-        
-    }
+        gameOver = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        text.text = win ? "You Win" : "Game Over";
+
+        text.gameObject.SetActive(true);
     }
 }

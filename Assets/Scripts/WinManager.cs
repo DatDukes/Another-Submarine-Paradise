@@ -31,6 +31,7 @@ public class WinManager : MonoBehaviour
         if(player.position == CurrentWinCondition.position) 
         {
             GameManager.Instance.dialog.AddLog("You win");
+            GameManager.Instance.GameOver(true);
         }
         else 
         {

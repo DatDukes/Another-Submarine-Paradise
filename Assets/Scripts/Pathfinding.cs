@@ -40,8 +40,9 @@ public class Pathfinding
             }
 
             Vector2Int matPos = entity.position + newMove - Origin;
+            bool posIsNotValid = matPos.x < 0 && matPos.x > 64 && matPos.y < 0 && matPos.y > 64;
 
-            if(CollisionMatrice[matPos.x, matPos.y]) 
+            if (posIsNotValid || CollisionMatrice[matPos.x, matPos.y]) 
             {
                 return move;
             }
