@@ -48,6 +48,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   isVisible: 0
   visibilityRange: 0
+  meshRender: {fileID: 8031068763547104396}
   oxygenGain: 15
 --- !u!1 &8836699865009741777
 GameObject:

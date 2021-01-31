@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   position: {x: 0, y: 0}
+  isVisible: 0
+  visibilityRange: 0
+  meshRender: {fileID: 6865421597265560945}
   localMoveTarget: {x: 10, y: 2}
   CellPerStep: 2
   oxygenVoler: 1

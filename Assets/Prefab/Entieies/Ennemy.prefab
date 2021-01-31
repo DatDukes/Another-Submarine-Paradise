@@ -127,6 +127,7 @@ MonoBehaviour:
   position: {x: -6, y: -5}
   isVisible: 0
   visibilityRange: 0
+  meshRender: {fileID: 8800848119568286333}
   player: {fileID: 0}
   cellPerStep: 2
   oxygenVoler: 10

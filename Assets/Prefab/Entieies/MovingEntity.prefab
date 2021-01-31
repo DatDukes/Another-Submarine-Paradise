@@ -125,4 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   position: {x: 0, y: 0}
+  isVisible: 0
+  visibilityRange: 0
+  meshRender: {fileID: 5047121389072707004}
   movePerStep: {x: 1, y: 1}

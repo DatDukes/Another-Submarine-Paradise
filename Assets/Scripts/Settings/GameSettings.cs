@@ -9,4 +9,8 @@ public class GameSettings : ScriptableObject
     public int startMoveRange;
 
     public int stepOxygenConsumed;
+
+    public float visibilityEnemies;
+    public float visibilityStashes;
+    public float visibilityTerrains;
 }
