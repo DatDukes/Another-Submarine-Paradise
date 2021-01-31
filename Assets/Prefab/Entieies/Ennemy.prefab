@@ -129,7 +129,7 @@ MonoBehaviour:
   visibilityRange: 0
   player: {fileID: 0}
   cellPerStep: 2
-  oxygenVoler: 5
+  oxygenVoler: 10
   osefTimerApresVol: 5
   maxFollowingDistance: 6
   detectionDistance: 7
