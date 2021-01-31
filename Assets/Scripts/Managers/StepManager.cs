@@ -5,6 +5,8 @@ using UnityEngine;
 public class StepManager : MonoBehaviour
 {
 
+    public RadarRevealer RaderReveal;
+
     public void PrepareNextStep()
     {
         GameManager.Instance.entityManager.Player.Step();
@@ -20,5 +22,7 @@ public class StepManager : MonoBehaviour
         GameManager.Instance.entityManager.pathsNodes.Clear();
 
         GameManager.Instance.resourcesManager.LowerResource(RessourceType.Oxygen, GameManager.Instance.gameSettings.stepOxygenConsumed);
+
+        RaderReveal.DoCheck();
     }
 }

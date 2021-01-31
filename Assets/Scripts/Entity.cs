@@ -25,8 +25,21 @@ public abstract class Entity : MonoBehaviour
                 visibilityRange = (int)GameManager.Instance.gameSettings.visibilityStashes;
                 break;
         }
+
+        ///Archi schlag, a changé si possible
+        if (meshRender == null)
+        {
+            meshRender = this.GetComponentInChildren<MeshRenderer>();
+        }
+
+        meshRender.enabled = false;
     }
-    public abstract void Step();
+
+    public virtual void Step()
+    {
+        meshRender.enabled = false;
+    }
+
     public virtual void Interact(Entity other) { }
 
     public void Update()
@@ -37,14 +50,16 @@ public abstract class Entity : MonoBehaviour
             meshRender = this.GetComponentInChildren<MeshRenderer>();
         }
 
-        if(VisibilityCheck())
+        VisibilityCheck();
+
+        /*if(VisibilityCheck())
         {
             meshRender.enabled = true;
         }
         else
         {
             meshRender.enabled = false;
-        }
+        }*/
     }
 
     public virtual bool VisibilityCheck()
