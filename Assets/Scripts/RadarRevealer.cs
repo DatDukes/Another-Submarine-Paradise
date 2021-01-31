@@ -31,6 +31,6 @@ public class RadarRevealer : MonoBehaviour
     public void DoCheck()
     {
         this.transform.localScale = Vector3.zero;
-        this.transform.DOScale(endSize, animationTime).OnComplete(() => { this.transform.localScale = Vector3.zero; }).SetEase(easeType).onComplete = () => { GameManager.Instance.stepManager.locked = false; } ;
+        this.transform.DOScale(endSize, animationTime).OnComplete(() => { this.transform.localScale = Vector3.zero; GameManager.Instance.stepManager.locked = false; }).SetEase(easeType) ;
     }
 }

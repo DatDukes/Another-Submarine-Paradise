@@ -10913,8 +10913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d9e12caa1d0c745b9cd778c8fa55da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTime: 1
-  endSize: {x: 5, y: 5, z: 5}
+  animationTime: 0.7
+  endSize: {x: 3, y: 3, z: 3}
   easeType: 1
 --- !u!136 &1518182315
 CapsuleCollider:
