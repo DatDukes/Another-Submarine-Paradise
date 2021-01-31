@@ -5,6 +5,12 @@ using UnityEngine;
 public class StepManager : MonoBehaviour
 {
 
+    public void CallNextStep()
+    {
+
+    }
+
+
     public void GoToNextStep()
     {
         foreach(Entity i in GameManager.Instance.entityManager.entities)
