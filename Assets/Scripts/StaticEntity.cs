@@ -17,6 +17,7 @@ public class StaticEntity : Entity
 
     override public void Step()
     {
+        base.Step();
         manager.AddPathNode(new EntityPathNode(this, position));
     }
 

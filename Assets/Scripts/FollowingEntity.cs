@@ -31,6 +31,7 @@ public class FollowingEntity : Entity
 
     public override void Step()
     {
+        base.Step();
         Vector2Int distPlayerEntity = player.position - position;
         Vector2Int distStartPlayer = player.position - startPosition;
 
