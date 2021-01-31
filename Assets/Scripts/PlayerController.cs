@@ -6,8 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : Entity
 {
-   
-
     public GameObject moveFeeback;
 
     [HideInInspector]
@@ -37,6 +35,16 @@ public class PlayerController : Entity
         //moveFeeback.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonUp("Fire1") && !EventSystem.current.IsPointerOverGameObject() && !GameManager.Instance.drawingManager.drawingOn && !GameManager.Instance.drawingManager.erasingOn)
+        {
+            nextPosition = GridManager.Instance.GetGripPosition();
+            moveFeeback.transform.position = new Vector3(nextPosition.x, this.transform.position.y, nextPosition.y);
+            moveFeeback.SetActive(true);
+        }
+    }
+
     public void Move()
     {
         StartCoroutine(MoveCouroutine());
@@ -56,7 +64,7 @@ public class PlayerController : Entity
             yield return new WaitForEndOfFrame();
         }
 
-        while (true)//Input.GetButtonUp("Fire1") == false)
+        while (true)
         {
             if(Input.GetButton("Fire1"))
             {
