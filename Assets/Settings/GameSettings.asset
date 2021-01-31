@@ -15,3 +15,6 @@ MonoBehaviour:
   startOxygen: 30
   startMoveRange: 2
   stepOxygenConsumed: 1
+  visibilityEnemies: 10
+  visibilityStashes: 10
+  visibilityTerrains: 7
