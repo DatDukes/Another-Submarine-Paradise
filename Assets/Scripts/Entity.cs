@@ -7,8 +7,25 @@ public abstract class Entity : MonoBehaviour
     public bool isVisible;
     public int visibilityRange;
     public MeshRenderer meshRender;
-    
-    public abstract void Init();
+
+    public virtual void Init()
+    {
+        switch(type)
+        {
+            case EntityType.player:
+                visibilityRange = 1;
+                break;
+            case EntityType.terrain:
+                visibilityRange = (int)GameManager.Instance.gameSettings.visibilityTerrains;
+                break;
+            case EntityType.ennemy:
+                visibilityRange = (int)GameManager.Instance.gameSettings.visibilityEnemies;
+                break;
+            case EntityType.stash:
+                visibilityRange = (int)GameManager.Instance.gameSettings.visibilityStashes;
+                break;
+        }
+    }
     public abstract void Step();
     public virtual void Interact(Entity other) { }
 
