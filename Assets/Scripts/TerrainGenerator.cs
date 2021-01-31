@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class TerrainGenerator : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class TerrainGenerator : MonoBehaviour
 
         foreach (GameObject obj in terrain) 
         {
-            Debug.Log((int)obj.transform.localPosition.x + "|" + (int)obj.transform.localPosition.z);
             ColMatix[(int)obj.transform.localPosition.x, (int)obj.transform.localPosition.z] = true;
         }
 
@@ -42,7 +42,7 @@ public class TerrainGenerator : MonoBehaviour
 
                 if(c.r < spawnThreshold) 
                 {
-                    GameObject go = Instantiate(prefab);
+                    GameObject go = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
                     go.transform.parent = transform;
                     go.transform.localPosition = new Vector3(x / step, 0, y / step);
 
