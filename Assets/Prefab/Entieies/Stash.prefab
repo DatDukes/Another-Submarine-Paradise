@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   position: {x: 0, y: 0}
-  oxygenGain: 10
+  isVisible: 0
+  visibilityRange: 0
+  oxygenGain: 15
 --- !u!1 &8836699865009741777
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cf67dfa2133aee74ca7ecc3ddedb9f29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

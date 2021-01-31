@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9141647796798770053}
   - component: {fileID: 7338314974638300103}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: TerrainPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   position: {x: 0, y: 0}
+  isVisible: 0
+  visibilityRange: 0
   oxygenGain: 0
 --- !u!1 &9141647797172708236
 GameObject:
@@ -105,7 +107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cf67dfa2133aee74ca7ecc3ddedb9f29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
