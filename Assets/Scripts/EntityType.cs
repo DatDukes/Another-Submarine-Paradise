@@ -6,7 +6,6 @@ public enum EntityType
 {
     none,
     player,
-    terrain,
+    end,
     ennemy,
-    stash,
 }

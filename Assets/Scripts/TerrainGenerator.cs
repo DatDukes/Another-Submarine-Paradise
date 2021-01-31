@@ -10,21 +10,6 @@ public class TerrainGenerator : MonoBehaviour
     public int step;
     public List<GameObject> terrain;
 
-    public bool[,] ColMatix;
-
-    private void Start()
-    {
-        ColMatix = new bool[64, 64];
-
-        foreach (GameObject obj in terrain) 
-        {
-            Debug.Log((int)obj.transform.localPosition.x + "|" + (int)obj.transform.localPosition.z);
-            ColMatix[(int)obj.transform.localPosition.x, (int)obj.transform.localPosition.z] = true;
-        }
-
-        Pathfinding.SetCollision(transform.position, ColMatix);
-    }
-
     public void Generate() 
     {
         foreach(GameObject go in terrain) 

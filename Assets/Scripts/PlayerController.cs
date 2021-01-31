@@ -34,7 +34,7 @@ public class PlayerController : Entity
         {
             manager.AddPathNode(new EntityPathNode(this, position));
         }
-        //moveFeeback.SetActive(false);
+        moveFeeback.SetActive(false);
     }
 
     public void Move()
