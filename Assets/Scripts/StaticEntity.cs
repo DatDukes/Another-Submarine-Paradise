@@ -24,6 +24,7 @@ public class StaticEntity : Entity
     public override void Interact(Entity other)
     {
         GameManager.Instance.resourcesManager.oxygen += oxygenGain;
+        GameManager.Instance.dialog.AddLog("You found " + oxygenGain + " oxygen in a stash");
         oxygenGain = 0;
     }
 }

@@ -8,15 +8,9 @@ public class DialogManager : MonoBehaviour
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
 
-    // Start is called before the first frame update
-    void Start()
+    public void AddLog(string text) 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        text += "\n" + dialogText.text;
+        dialogText.text = text;
     }
 }
