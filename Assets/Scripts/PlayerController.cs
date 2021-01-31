@@ -31,6 +31,7 @@ public class PlayerController : Entity
         else 
         {
             manager.AddPathNode(new EntityPathNode(this, position));
+            GameManager.Instance.stepManager.locked = false;
         }
         //moveFeeback.SetActive(false);
     }

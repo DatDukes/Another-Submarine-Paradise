@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class StepManager : MonoBehaviour
 {
-
+    public bool locked;
     public RadarRevealer RaderReveal;
 
     public void PrepareNextStep()
     {
-        GameManager.Instance.entityManager.Player.Step();
+        if (!locked)
+        {
+            GameManager.Instance.entityManager.Player.Step();
+            locked = true;
+        }
     }
 
     public void GoToNextStep()
