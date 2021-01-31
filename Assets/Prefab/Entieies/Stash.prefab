@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e7665b2649eff48a56f241b31328d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 4
   position: {x: 0, y: 0}
   isVisible: 0
   visibilityRange: 0

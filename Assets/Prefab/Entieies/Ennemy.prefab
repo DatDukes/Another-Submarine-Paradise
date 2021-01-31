@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a30bb241f3b58a42ac03f9462b49590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   position: {x: -6, y: -5}
   isVisible: 0
   visibilityRange: 0

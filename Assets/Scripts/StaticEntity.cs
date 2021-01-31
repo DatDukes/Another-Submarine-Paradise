@@ -8,6 +8,7 @@ public class StaticEntity : Entity
 
     override public void Init()
     {
+        base.Init();
         manager = GameManager.Instance.entityManager;
         transform.position = new Vector3(Mathf.Round(transform.position.x), 0, Mathf.Round(transform.position.z));
         position.x = (int)(transform.position.x);

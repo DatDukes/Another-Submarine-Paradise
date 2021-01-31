@@ -18,6 +18,7 @@ public class FollowingEntity : Entity
 
     public override void Init()
     {
+        base.Init();
         manager = GameManager.Instance.entityManager;
         player = manager.Player;
         transform.position = new Vector3(Mathf.Round(transform.position.x), 0, Mathf.Round(transform.position.z));
