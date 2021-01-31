@@ -27,7 +27,7 @@ public class PlayerController : Entity
         if (position != nextPosition)
         {
             position += Pathfinding.GetStepMovement(manager, this, nextPosition, cellPerStep);
-            transform.DOMove(new Vector3(position.x, 0, position.y), 0.5f);
+            transform.DOMove(new Vector3(position.x, 0, position.y), 0.5f).OnComplete(() => { GameManager.Instance.stepManager.GoToNextStep(); });
             //transform.position = new Vector3(position.x, 0, position.y);
         }
         else 

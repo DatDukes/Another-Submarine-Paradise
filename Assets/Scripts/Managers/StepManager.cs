@@ -5,17 +5,16 @@ using UnityEngine;
 public class StepManager : MonoBehaviour
 {
 
-    public void CallNextStep()
+    public void PrepareNextStep()
     {
-
+        GameManager.Instance.entityManager.Player.Step();
     }
-
 
     public void GoToNextStep()
     {
-        foreach(Entity i in GameManager.Instance.entityManager.entities)
+        for(int i =1; i <  GameManager.Instance.entityManager.entities.Count; i++)
         {
-            i.Step();
+            GameManager.Instance.entityManager.entities[i].Step();
         }
 
         GameManager.Instance.entityManager.pathsNodes.Clear();
