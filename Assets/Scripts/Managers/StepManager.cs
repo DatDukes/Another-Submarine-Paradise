@@ -11,8 +11,8 @@ public class StepManager : MonoBehaviour
     {
         if (!locked)
         {
-            GameManager.Instance.entityManager.Player.Step();
             locked = true;
+            GameManager.Instance.entityManager.Player.Step();
         }
     }
 
