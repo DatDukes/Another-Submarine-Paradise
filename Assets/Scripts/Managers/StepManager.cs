@@ -9,7 +9,7 @@ public class StepManager : MonoBehaviour
 
     public void PrepareNextStep()
     {
-        if (!locked)
+        if (!locked && !GameManager.Instance.gameOver)
         {
             locked = true;
             GameManager.Instance.entityManager.Player.Step();

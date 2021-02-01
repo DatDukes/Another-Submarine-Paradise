@@ -48,7 +48,7 @@ public class PlayerController : Entity
 
     public void Move()
     {
-        if(!GameManager.Instance.gameOver) StartCoroutine(MoveCouroutine());
+       StartCoroutine(MoveCouroutine());
     }
 
     public override void Interact(Entity other)
