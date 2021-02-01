@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class TerrainGenerator : MonoBehaviour
 {
@@ -27,7 +29,8 @@ public class TerrainGenerator : MonoBehaviour
 
     public void Generate() 
     {
-        foreach(GameObject go in terrain) 
+#if UNITY_EDITOR
+        foreach (GameObject go in terrain) 
         {
             DestroyImmediate(go);
         }
@@ -50,5 +53,6 @@ public class TerrainGenerator : MonoBehaviour
                 }
             }
         }
+#endif
     }
 }
