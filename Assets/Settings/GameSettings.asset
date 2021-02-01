@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   startOxygen: 30
-  startMoveRange: 2
+  startMoveRange: 3
   stepOxygenConsumed: 1
   visibilityEnemies: 10
   visibilityStashes: 10
