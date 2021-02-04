@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 04a54105187cb7c4b8666d1b41895e1a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8268738734563478543
+    second: Control2_0
+  - first:
+      213: 1794282112661866784
+    second: Control2_1
+  - first:
+      213: -2390938817628743117
+    second: Control2_2
+  - first:
+      213: -7442924465682241926
+    second: Control2_3
+  - first:
+      213: -8551346666046646060
+    second: Control2_4
+  - first:
+      213: -820362830364721134
+    second: Control2_5
+  - first:
+      213: 504031756669987613
+    second: Control2_6
+  - first:
+      213: 6437024174675778703
+    second: Control2_7
+  - first:
+      213: -7961678503801259937
+    second: Control2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +122,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Control2_0
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 985
+        width: 335
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c4b26c11670c270800000000000000
+      internalID: 8268738734563478543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 515
+        width: 615
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0294c00331296e810800000000000000
+      internalID: 1794282112661866784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_2
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 304
+        width: 309
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33adb8720dda1ded0800000000000000
+      internalID: -2390938817628743117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_3
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 957
+        width: 499
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7622fcf1ab65b890800000000000000
+      internalID: -7442924465682241926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_4
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 848
+        width: 418
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d89113a383835980800000000000000
+      internalID: -8551346666046646060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_5
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 739
+        width: 530
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2104d2d2a5c7d94f0800000000000000
+      internalID: -820362830364721134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_6
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 630
+        width: 505
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ba4d3563eaef600800000000000000
+      internalID: 504031756669987613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_7
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 504
+        width: 588
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cd62ec167e45950800000000000000
+      internalID: 6437024174675778703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Control2_8
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 0
+        width: 645
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58ff05659f628190800000000000000
+      internalID: -7961678503801259937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
