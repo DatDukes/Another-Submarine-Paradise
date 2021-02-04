@@ -24,6 +24,10 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         baseOffset = this.transform.position - player.transform.position;
+
+#if UNITY_ANDROID
+        normalZoom = 8.5f;
+#endif
     }
 
     // Update is called once per frame
